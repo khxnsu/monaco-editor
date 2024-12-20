@@ -4,9 +4,9 @@ window.MonacoEnvironment = {
     getWorkerUrl: function(workerId, label) {
         return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
             self.MonacoEnvironment = {
-                baseUrl: '${location.origin}/node_modules/monaco-editor/min/'
+                baseUrl: './node_modules/monaco-editor/min/'
             };
-            importScripts('${location.origin}/node_modules/monaco-editor/min/vs/base/worker/workerMain.js');`
+            importScripts('./node_modules/monaco-editor/min/vs/base/worker/workerMain.js');`
         )}`;
     }
 };
